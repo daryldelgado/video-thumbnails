@@ -13,6 +13,10 @@ This Vue 3 application utilizes Tailwind CSS, ElementPlus, and Pinia for state m
 - [Element Plus](https://element-plus.org/en-US/) - A Vue 3.0 based component library for developers.
 - [Vite](https://vitejs.dev/guide/) - Next-generation frontend tooling. It's fast!
 
+# UI
+![alt text](image-2.png)
+
+![alt text](image-3.png)
 
 ## Setup Instructions
 
