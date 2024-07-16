@@ -1,0 +1,150 @@
+/* Custom ELEMENT UI Input element */
+.custom-input-default {
+  border-radius: 0;
+
+  div {
+      border-radius: 5px;
+
+      &.is-focus {
+          border-color: $colorDarkGrey;
+          box-shadow: 0 0 0 1px $colorDarkGrey;
+      }
+
+      input {
+          border-radius: 0;
+          padding: 5px;
+          border: $colorGrey;
+          padding: 23px 0;
+
+          &:focus,
+          &:active,
+          &:hover {
+              border-color: $colorDarkGrey;
+          }
+      }
+  }
+
+  // Add ::after container for right icon
+  &.with-right-icon {
+      &:after {
+          content: "";
+          position: absolute;
+          top: 13px;
+          right: 7px;
+          width: 26px;
+          height: 20px;
+      }
+  }
+
+  // Add right icon type email
+  &.right-icon-email {
+      &:after {
+          background: url('../icons/email.svg') no-repeat center center;
+      }
+  }
+
+  // Add right icon type password
+  &.right-icon-password{
+      &:after {
+          background: url('../icons/key.svg') no-repeat center center;
+      }
+  }
+}
+
+/* Custom ELEMENT UI Button element */
+.custom-button-grey {
+  background-color: #d8d8d8;
+  border-color: transparent;
+  padding: 10px;
+  color: $colorDarkGrey;
+  box-shadow: none;
+  height: 36px;
+
+  &:hover,
+  &:active,
+  &:focus {
+      background-color: #d3d2d2;
+      color: $colorDarkGrey;
+      border-color: transparent;
+  }
+}
+
+/* Custom ELEMENT UI FORM element */
+.common-form {
+  .el-form-item {
+    padding: 0 0px 8px 0px;
+
+    .el-form-item__error {
+        font-size: 13px;
+        font-weight: 400;
+    }
+
+    .el-select {
+        width: 100%;
+
+        .el-input__wrapper {
+            padding: 4px 10px;
+        }
+    }
+  }
+}
+
+/* Custom white button */
+.cstm-white-btn-primary {
+    color: $colorDeepGrey;
+    width: 162px;
+    height: 36px;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 16px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    font-family: 'Montserrat-Regular', sans-serif;
+    border: none;
+
+    &:hover,
+    &:active,
+    &:focus {
+        color: $colorDeepGrey;
+    }
+}
+
+/* Custom Dropdown */
+.custom-dropdown-popper {
+    &.user-details-dropdown {
+        margin-right: 20px;
+    }
+
+    .el-popper__arrow {
+        display: none;
+    }
+
+    ul {
+        padding: 0px;
+
+        li {
+            padding: 10px 15px;
+
+            i.icon {
+                padding: 10px;
+                margin-right: 12px;
+
+                &.my-profile {
+                    background: url('../icons/my-profile.svg') no-repeat center center;
+                    background-size: contain;
+                }
+
+                &.change-password {
+                    background: url('../icons/change-password.svg') no-repeat center center;
+                    background-size: contain;
+                }
+
+                &.logout {
+                    background: url('../icons/logout.svg') no-repeat center center;
+                    background-size: contain;
+                }
+            }
+        }
+    }
+}

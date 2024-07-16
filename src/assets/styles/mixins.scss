@@ -1,0 +1,95 @@
+/* Placeholder */
+@mixin placeholder($color) {
+
+  /* Chrome/Opera/Safari */
+  &::-webkit-input-placeholder {
+    color: $color;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 13px;
+
+    @include medium-and-small-screen() {
+      font-size: 12px;
+    }
+  }
+
+  /* Firefox 19+ */
+  &::-moz-placeholder {
+    color: $color;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 13px;
+
+    @include medium-and-small-screen() {
+      font-size: 12px;
+    }
+  }
+
+  /* Firefox 18- */
+  &:-moz-placeholder {
+    color: $color;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 13px;
+
+    @include medium-and-small-screen() {
+      font-size: 12px;
+    }
+  }
+
+  /* IE 10+ */
+  &:-ms-input-placeholder {
+    color: $color;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-size: 13px;
+
+    @include medium-and-small-screen() {
+      font-size: 12px;
+    }
+  }
+}
+
+/* Border Radius */
+@mixin border-radius($radius) {
+  -webkit-border-radius: $radius;
+  -moz-border-radius: $radius;
+  border-radius: $radius;
+}
+
+/* Gradient Button Background */
+@mixin gradient-button-background() {
+  background: #1cdbd1;
+  background: -moz-linear-gradient(top, #1cdbd1 0%, #7b2bb8 100%);
+  background: -webkit-gradient(left top, left bottom, color-stop(0%, #1cdbd1), color-stop(100%, #7b2bb8));
+  background: -webkit-linear-gradient(top, #1cdbd1 0%, #7b2bb8 100%);
+  background: -o-linear-gradient(top, #1cdbd1 0%, #7b2bb8 100%);
+  background: -ms-linear-gradient(top, #1cdbd1 0%, #7b2bb8 100%);
+  background: linear-gradient(to bottom, #1cdbd1 0%, #7b2bb8 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#1cdbd1', endColorstr='#7b2bb8', GradientType=0 );
+}
+
+/* Media Queries */
+@mixin large-screen {
+  @media (min-width: 1920px) {
+    @content;
+  }
+}
+
+@mixin medium-and-small-screen {
+  @media (min-width: 320px) and (max-width: 1919px) {
+    @content;
+  }
+}
+
+@mixin medium-screen {
+  @media (min-width: 1280px) and (max-width: 1919px) {
+    @content;
+  }
+}
+
+@mixin small-screen {
+  @media (max-width: 1279px) {
+    @content;
+  }
+}
